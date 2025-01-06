@@ -1,0 +1,202 @@
+/* Style principal de la boutique */
+.shop {
+    padding: 20px;
+    background: #f5f5f5; /* Arrière-plan neutre pour la page */
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .shop-title {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Conteneur des cartes de produits */
+  .product-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne */
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* Style des cartes produits */
+  .product-card {
+    background: linear-gradient(145deg, #e0f7ff 70%, #a1c4fd 30%); /* Blanc 70%, Bleu ciel 30% */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Images des produits */
+  .product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  /* Détails de chaque produit */
+  .product-details {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .product-name {
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .product-seller,
+  .product-price,
+  .product-stock {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .product-seller span,
+  .product-price span,
+  .product-stock span {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Bouton "Buy Now" */
+  .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background: linear-gradient(45deg, #ff6a95, #ff85a3);
+    box-shadow: 0 6px 15px rgba(255, 118, 150, 0.5);
+    transform: scale(1.05);
+  }
+  
+  /* Responsive : pour les écrans plus petits */
+  @media (max-width: 1024px) {
+    .product-cards {
+      grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-cards {
+      grid-template-columns: 1fr; /* 1 carte par ligne */
+    }
+  }
+  
+
+
+  /* Style pour le bouton "Shop Now" */
+.shop-now-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #6e7dff, #5560ea); /* Dégradé moderne */
+    border-radius: 30px;
+    border: 2px solid transparent;  /* Bordure invisible */
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(85, 96, 234, 0.2); /* Ombre légère */
+}
+
+/* Effet hover avec changement de couleur, agrandissement et ombre */
+.shop-now-button:hover {
+    background: linear-gradient(135deg, #5560ea, #6e7dff); /* Inverser les couleurs du dégradé */
+    transform: scale(1.05); /* Légèrement agrandi au survol */
+    box-shadow: 0 12px 25px rgba(85, 96, 234, 0.3); /* Ombre plus forte */
+}
+
+/* Effet de focus pour l'accessibilité */
+.shop-now-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(85, 96, 234, 0.5); /* Ajout d'un halo lumineux autour du bouton */
+}
+
+/* Style pour l'effet de clic (active) */
+.shop-now-button:active {
+    transform: scale(1.02); /* Réduction légère lors du clic */
+    box-shadow: 0 6px 12px rgba(85, 96, 234, 0.2); /* Ombre réduite */
+}
+
+
+
+
+
+/* Style du titre */
+.shop-title {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding: 10px 30px;
+    background: #fff;
+    border: 5px solid #FFD700; /* Bordure dorée */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    overflow: hidden;
+}
+
+/* Effet des rayons de soleil */
+.shop-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 223, 0, 0.6) 0%, transparent 60%);
+    transform: translate(-50%, -50%);
+    animation: sun-rays 3s linear infinite;
+    z-index: -1;
+}
+
+/* Animation des rayons de soleil */
+@keyframes sun-rays {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,120 @@
+.footer {
+    background: linear-gradient(to right, #f0f0f0 70%, #ff69b4, #ffa500); /* Dégradé blanc, rose bonbon et orange */
+    color: #333; /* Couleur du texte */
+    padding: 20px 0; /* Espacement intérieur haut et bas */
+    text-align: center; /* Centre le texte */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+      display: flex;
+      justify-content: space-around; /* Distribue l'espace entre les éléments */
+      align-items: center; /* Centre verticalement les éléments */
+      max-width: 960px; /* Largeur maximale pour éviter que le footer ne devienne trop large */
+      margin: 0 auto; /* Centre le contenu */
+      flex-wrap: wrap; /* Permet au contenu de passer à la ligne si l'écran est trop petit */
+  }
+  
+  .footer-names, .footer-social, .footer-links {
+      margin: 10px; /* Ajoute de l'espace autour des éléments */
+  }
+  
+  .footer-social {
+    display: flex; /* Permet d'aligner les icônes horizontalement */
+    gap: 10px; /* Espacement entre les icônes */
+  }
+  
+  .social-icon {
+    color: #333; /* Couleur des icônes */
+    font-size: 20px; /* Taille des icônes */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    transition: color 0.3s ease; /* Ajoute une transition douce pour la couleur */
+  }
+  
+  .social-icon:hover {
+    color: #007bff; /* Change la couleur au survol */
+  }
+  
+  .footer-links a {
+      color: #333;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+      color: #007bff;
+  }
+  
+  /* Style pour les petits écrans */
+  @media (max-width: 768px) {
+      .footer-content {
+          flex-direction: column; /* Passe en colonne sur les petits écrans */
+          align-items: center;
+      }
+  }
+
+
+  .cta {
+    position: relative;
+    margin: auto;
+    padding: 11.5px 18px;
+    transition: all 0.2s ease;
+    border: 3px solid #552da8;
+    border-radius: 50px;
+    background: #552da8;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    border-radius: 50px;
+    background: white;
+    width: 45px;
+    height: 45px;
+    transition: all 0.8s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: Montserrat;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.5s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: #1c1c1c;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+    transition: all 2s ease;
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+    transition: all 2s ease;
+  }
+  
